@@ -1,4 +1,4 @@
-from kube_downscaler.cmd import get_parser
+from kube_downscaler.command import get_parser
 
 
 def test_parse_args():

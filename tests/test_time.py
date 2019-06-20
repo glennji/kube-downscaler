@@ -17,6 +17,9 @@ def test_time_spec():
 
     dt = datetime(2017, 11, 26, 15, 33)
     assert matches_time_spec(dt, 'Sat-Sun 15:30-16:00 UTC')
+    assert matches_time_spec(dt, 'Sat-Sun 15:30-08:00 UTC')
+    assert matches_time_spec(dt, 'Sun-Tue 15:30-08:00 UTC')
+
     assert not matches_time_spec(dt, 'Sat-Sun 15:34-16:00 UTC')
     assert not matches_time_spec(dt, 'Mon-Fri 08:00-18:00 UTC')
 
