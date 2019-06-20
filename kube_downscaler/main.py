@@ -4,14 +4,14 @@ import time
 
 import logging
 
-from kube_downscaler import __version__, cmd, shutdown
+from kube_downscaler import __version__, command, shutdown
 from kube_downscaler.scaler import scale
 
 logger = logging.getLogger('downscaler')
 
 
 def main(args=None):
-    parser = cmd.get_parser()
+    parser = command.get_parser()
     args = parser.parse_args(args)
 
     logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s',
